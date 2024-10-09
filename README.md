@@ -34,7 +34,7 @@ creating structured parent-child relationship using the `TreeBuilder` util.
    final result = treeBuilder.buildTree(list);
    ```
 
-the result will be a list of `TreeOutPutItem` that includes the parent and its children and the depth of each item
+the result will be a `List<TreeOutPutItem<T>>` which contain the parent item and its children.
 
 ---
 

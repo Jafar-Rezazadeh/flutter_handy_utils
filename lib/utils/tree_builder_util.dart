@@ -66,7 +66,7 @@ class TreeBuilder<T> {
     return rootNodes
         .map(
           (e) => TreeOutPutItem<T>(
-            item: e.root,
+            data: e.root.data,
             children: _convertToTreeOutPutItem(e.children),
             depth: e.depth,
           ),
@@ -114,18 +114,18 @@ class TreeInputItem<T> {
 }
 
 class TreeOutPutItem<T> {
-  final TreeInputItem<T> item;
+  final T data;
   final List<TreeOutPutItem<T>> children;
   final int depth;
 
   TreeOutPutItem({
-    required this.item,
+    required this.data,
     required this.depth,
     required this.children,
   });
 
   @override
   String toString() {
-    return "(parent: ${item.data} , children: (${children.map((e) => e.item.data).join(",")}) , depth:$depth)";
+    return "(parent: $data , children: (${children.map((e) => e.data).join(",")}) , depth:$depth)";
   }
 }
