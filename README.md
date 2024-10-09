@@ -6,33 +6,37 @@ The `flutter_handy_utils` package is a **community-driven** project designed to 
 
 - structured parent-child relationships
 
-## Getting started
+## Usage
+
+### TreeBuilder:
 
 creating structured parent-child relationship using the `TreeBuilder` util.
 
-make a list of `TreeInputItem`:
+1. make a list of `TreeInputItem`:
 
-```dart
-final list = [
-    TreeInputItem<T>(id: int, parentId: int, data: <T>)
-    TreeInputItem<T>(id: int, parentId: int, data: <T>)
-    TreeInputItem<T>(id: int, parentId: int, data: <T>)
-];
-```
+   ```dart
+   final list = [
+      TreeInputItem<T>(id: int, parentId: int, data: <T>)
+      TreeInputItem<T>(id: int, parentId: int, data: <T>)
+      TreeInputItem<T>(id: int, parentId: int, data: <T>)
+   ];
+   ```
 
-create new instance of TreeBuilder with the given type:
+2. create an instance of TreeBuilder with the given type:
 
-```dart
-final treeBuilder = TreeBuilder<T>();
-```
+   ```dart
+   final treeBuilder = TreeBuilder<T>();
+   ```
 
-make the structured parent-child relationship using:
+3. make the structured parent-child relationship using:
 
-```dart
-final result = treeBuilder.buildTree(list);
-```
+   ```dart
+   final result = treeBuilder.buildTree(list);
+   ```
 
 the result will be a list of `TreeOutPutItem` that includes the parent and its children and the depth of each item
+
+---
 
 ## Additional information
 
