@@ -18,7 +18,8 @@ extension WidgetsSeparator on List<Widget> {
     return separatedList;
   }
 
-  bool _isNotFirstAndLastItem(Widget e) => indexOf(e) > 0 && indexOf(e) < length;
+  bool _isNotFirstAndLastItem(Widget e) =>
+      indexOf(e) > 0 && indexOf(e) < length;
 
   List<Widget> withDividerInBetween({
     Color? color,
