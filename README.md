@@ -34,35 +34,29 @@ creating structured parent-child relationship using the `TreeBuilder` util.
    final result = treeBuilder.buildTree(list);
    ```
 
-the result will be a list of `TreeOutPutItem` that includes the parent and its children and the depth of each item
+the result will be a `List<TreeOutPutItem<T>>` which contain the parent item and its children.
 
 ---
 
 ## Additional information
 
-## 📖 Where to Find More Information:
-
-- **Official Documentation**: Find comprehensive details, usage examples, and release notes on [**pub.dev**](https://pub.dev/).
-- **API Documentation**: For in-depth API details, visit the [GitHub repository](https://github.com/) or explore the package page on Pub.dev.
-<!-- TODO: add the repository and pub.dev link -->
-
-## 🤝 How to Contribute:
+### 🤝 How to Contribute:
 
 Contributions are always welcome! You can get involved in a variety of ways:
 
 1. **Fork the Repository**:
-   - Start by forking the [GitHub repository](https://github.com/) to your account.
+   - Start by forking the [GitHub repository](https://github.com/Jafar-Rezazadeh/flutter_handy_utils/tree/master) to your account.
 2. **Create a New Branch**:
    - Make your improvements, whether it's bug fixes, new features, or enhancing the documentation.
 3. **Submit a Pull Request**:
    - Once done, submit a PR with a detailed explanation of the changes.
 
-### 🔧 Code Standards:
+#### 🔧 Code Standards:
 
 - Ensure that your code follows the project's coding style and conventions.
 - Contributions should be accompanied by **unit tests** to ensure the stability of the package.
 
-## 🐛 Filing Issues:
+### 🐛 Filing Issues:
 
 Encounter a problem or have a suggestion? You can:
 
@@ -72,14 +66,13 @@ Encounter a problem or have a suggestion? You can:
   - Any relevant logs or error messages
 - **Request New Features**: If you have ideas for improvements or new utilities, feel free to submit a **feature request** via the GitHub Issues page.
 
-## 📬 Response from the Package Authors:
+### 📬 Response from the Package Authors:
 
 - **Issue Response Time**: The maintainers strive to respond to issues within a few days. However, complex issues may take longer to resolve.
 - **Community Involvement**: Other contributors may also assist with questions, issues, and pull request reviews.
 
-## 🌟 Getting More Involved:
+### 🌟 Getting More Involved:
 
-- **Leave Feedback**: Your feedback helps shape the future of the package. Feel free to leave comments and reviews on the [**Pub.dev page**](https://pub.dev/).
 - **Join Discussions**: If you have general questions, ideas, or want to collaborate, consider participating in **GitHub Discussions** if available.
 
 ---
