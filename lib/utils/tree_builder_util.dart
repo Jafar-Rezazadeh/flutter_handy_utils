@@ -1,4 +1,4 @@
-/// A utility class for  building  a tree from a list of `TreeInputItem`s.
+/// A utility class for building  structured parent-child relationships.
 ///
 class TreeBuilder<T> {
   //
