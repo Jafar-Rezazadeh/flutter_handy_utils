@@ -45,7 +45,7 @@ the result will be a `List<TreeOutPutItem<T>>` which contain the parent item and
 Contributions are always welcome! You can get involved in a variety of ways:
 
 1. **Fork the Repository**:
-   - Start by forking the [GitHub repository](https://github.com/) to your account.
+   - Start by forking the [GitHub repository](https://github.com/Jafar-Rezazadeh/flutter_handy_utils/tree/master) to your account.
 2. **Create a New Branch**:
    - Make your improvements, whether it's bug fixes, new features, or enhancing the documentation.
 3. **Submit a Pull Request**:
@@ -73,7 +73,6 @@ Encounter a problem or have a suggestion? You can:
 
 ### 🌟 Getting More Involved:
 
-- **Leave Feedback**: Your feedback helps shape the future of the package. Feel free to leave comments and reviews on the [**Pub.dev page**](https://pub.dev/).
 - **Join Discussions**: If you have general questions, ideas, or want to collaborate, consider participating in **GitHub Discussions** if available.
 
 ---
