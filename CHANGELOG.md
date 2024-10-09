@@ -13,3 +13,9 @@
 ### removed:
 
 - `item` property of `TreeOutPutItem` removed.
+
+## 2.1.0
+
+### added:
+
+- **new Extension**: WidgetsSeparator an extension that can be used to add a separator between widgets in a `list<Widget>`.

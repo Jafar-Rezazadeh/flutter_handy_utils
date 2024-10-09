@@ -4,7 +4,13 @@ The `flutter_handy_utils` package is a **community-driven** project designed to 
 
 ## Features
 
-- structured parent-child relationships
+### utils:
+
+- tree builder: structured parent-child relationships
+
+### extensions:
+
+- widgets separator: useful to separate widgets in a list by adding a gap or divider in between them
 
 ## Usage
 
@@ -36,19 +42,40 @@ creating structured parent-child relationship using the `TreeBuilder` util.
 
 the result will be a `List<TreeOutPutItem<T>>` which contain the parent item and its children.
 
+### WidgetsSeparator:
+
+`withDividerInBetween`:
+
+```dart
+   listOfWidgets.withDividerInBetween(
+        color: Colors.red,
+        height: 20,
+        thickness: 20,
+        indent: 20,
+        endIndent: 20,
+      );
+
+```
+
+`withGapInBetween`:
+
+```dart
+   listOfWidgets.withGapInBetween(gapSize: 20);
+```
+
 ---
 
-## About the Author
+---
+
+## Additional information
+
+### About the Author
 
 Hi there! 👋 I'm **Jafar Rezazadeh**, a software developer with a deep love for building high-quality, scalable, and efficient solutions in both **Dart** and **Flutter**. With a strong background in mobile development, I enjoy contributing to the open-source community and helping other developers with tools and libraries that make their projects more seamless and powerful.
 
 I created this package to offer a set of handy utilities that can simplify everyday development tasks. Whether you're working on a small project or a large-scale application, these tools are designed to make your workflow more efficient and streamlined. My goal is to provide developers with a versatile and easy-to-use toolkit that can be quickly integrated into various projects, helping you focus more on building great features and less on repetitive coding tasks.
 
 Feel free to reach out if you have any questions, suggestions, or just want to connect! You can find Via [GitHub - Jafar.Rezazadeh](https://github.com/Jafar-Rezazadeh), or mail to [jafarrezazadeh76@gmail.com](mailto:jafarrezazadeh76.gmail.com).
-
----
-
-## Additional information
 
 ### 🤝 How to Contribute:
 
