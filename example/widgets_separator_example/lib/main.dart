@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_handy_utils/extensions/widget_separator_.dart';
+import 'package:flutter_handy_utils/extensions/widgets_separator_.dart';
 
 void main() {
   runApp(const MainApp());
