@@ -1,8 +1,8 @@
-## 1.0.0
+## 2.1.0
 
 ### added:
 
-- `TreeBuilder` a utility class for building structured parent-child relationships.
+- **new Extension**: WidgetsSeparator an extension that can be used to add a separator between widgets in a `list<Widget>`.
 
 ## 2.0.0
 
@@ -14,8 +14,8 @@
 
 - `item` property of `TreeOutPutItem` removed.
 
-## 2.1.0
+## 1.0.0
 
 ### added:
 
-- **new Extension**: WidgetsSeparator an extension that can be used to add a separator between widgets in a `list<Widget>`.
+- `TreeBuilder` a utility class for building structured parent-child relationships.
