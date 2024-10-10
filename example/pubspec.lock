@@ -57,7 +57,7 @@ packages:
   flutter_handy_utils:
     dependency: "direct main"
     description:
-      path: "../.."
+      path: ".."
       relative: true
     source: path
     version: "2.1.0"
