@@ -164,7 +164,7 @@ class _WidgetsSeparatorExampleState extends State<WidgetsSeparatorExample> {
               endIndent: 5,
               height: 5,
               indent: 5,
-              thickness: 2,
+              thickness: 1,
             ),
           ),
         ),

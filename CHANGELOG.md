@@ -1,3 +1,7 @@
+## 2.1.2
+
+- example added
+
 ## 2.1.1
 
 - bugfixes
