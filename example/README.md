@@ -1,3 +1,3 @@
-# tree_builder_example
+# example
 
 A new Flutter project.
