@@ -1,6 +1,6 @@
 name: flutter_handy_utils
 description: "The `flutter_handy_utils` package is a community-driven project designed to simplify common tasks in Flutter development"
-version: 2.1.0
+version: 2.1.2
 repository: https://github.com/jafar-rezazadeh/flutter_handy_utils
 
 environment:

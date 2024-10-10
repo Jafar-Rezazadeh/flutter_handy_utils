@@ -65,8 +65,6 @@ the result will be a `List<TreeOutPutItem<T>>` which contain the parent item and
 
 ---
 
----
-
 ## Additional information
 
 ### About the Author
