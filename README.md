@@ -74,7 +74,7 @@ separates the list of widgets by adding a gap or divider in between them.
 
 Returns a new string truncated from the start or end to the specified maximum length.
 
-```
+```dart
 String text = "This is a very long string";
 
 String truncatedText = text.ellipsSize(maxLength: 10);
@@ -89,7 +89,7 @@ print(truncatedTextFromStart); // "...very long string".
 
 displays a group of radio buttons, where only one radio button can be selected at a time. The radio buttons are displayed in a column layout.
 
-```
+```dart
 GroupedRadioButton<String>(
   items: [
     GroupedRadioButtonItem(title: Text("Option 1"), value: "option1"),
