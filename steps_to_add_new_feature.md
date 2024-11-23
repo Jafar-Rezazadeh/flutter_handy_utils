@@ -14,6 +14,8 @@
 >
 > 8. Run `dart pub publish --dry-run` make sure no warnings
 >
-> 9. finish release and go to master branch
+> 9. upgrade version in `pubspec.yaml`
 >
-> 10. Run `dart pub publish`
+> 10. finish release and go to master branch
+>
+> 11. Run `dart pub publish`
