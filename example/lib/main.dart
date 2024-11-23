@@ -1,5 +1,9 @@
+import 'package:example/examples/grouped_radio_button_example.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_handy_utils/flutter_handy_utils.dart';
+
+import 'examples/string_ellips_size_example.dart';
+import 'examples/tree_builder_example.dart';
+import 'examples/widget_separator_example.dart';
 
 void main() {
   runApp(const MainApp());
@@ -25,6 +29,8 @@ class MainApp extends StatelessWidget {
           children: [
             _treeBuilder(),
             _widgetsSeparator(),
+            _stringEllipsSize(),
+            _groupedRadioButton(),
           ],
         ),
       ),
@@ -50,144 +56,24 @@ class MainApp extends StatelessWidget {
       ],
     );
   }
-}
 
-class TreeBuilderExample extends StatefulWidget {
-  const TreeBuilderExample({super.key});
-
-  @override
-  State<TreeBuilderExample> createState() => _TreeBuilderExampleState();
-}
-
-class _TreeBuilderExampleState extends State<TreeBuilderExample> {
-  //
-  final sampleData = [
-    {"id": 1, "parentId": 0, "data": "parent", "checked": true},
-    {"id": 2, "parentId": 1, "data": "child", "checked": true},
-    {"id": 3, "parentId": 2, "data": "descendant", "checked": true},
-    {"id": 4, "parentId": 2, "data": "descendant", "checked": true}
-  ];
-  final treeBuilder = TreeBuilder<Map<String, dynamic>>();
-  late List<TreeOutPutItem<Map<String, dynamic>>> tree;
-
-  List<TreeOutPutItem<Map<String, dynamic>>> _generateTree() {
-    final treeInputItems = sampleData
-        .map((e) => TreeInputItem(
-              id: e["id"] as int,
-              parentId: e["parentId"] as int,
-              data: e,
-            ))
-        .toList();
-
-    return treeBuilder.buildTree(treeInputItems);
-  }
-
-  @override
-  void initState() {
-    tree = _generateTree();
-    super.initState();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: tree.map((item) => _listItem(item)).toList(),
-    );
-  }
-
-  Widget _listItem(TreeOutPutItem<Map<String, dynamic>> item) {
-    return Column(
+  Widget _stringEllipsSize() {
+    return const ExpansionTile(
+      title: Text("StringEllipsSize"),
+      childrenPadding: EdgeInsets.all(10),
       children: [
-        _rootItem(item),
-        ..._children(item),
+        StringEllipsSizeExample(),
       ],
     );
   }
 
-  ListTile _rootItem(TreeOutPutItem<Map<String, dynamic>> item) {
-    return ListTile(
-      leading: Checkbox(
-        value: item.data["checked"],
-        onChanged: (value) => setState(() => item.data["checked"] = value!),
-      ),
-      title: Text(item.data["data"] +
-          "       -       " +
-          "item depth: " +
-          item.depth.toString()),
-    );
-  }
-
-  Iterable<Widget> _children(TreeOutPutItem<Map<String, dynamic>> item) {
-    return item.children.map(
-      (child) => Padding(
-        padding: const EdgeInsets.only(left: 16),
-        child: _listItem(child),
-      ),
-    );
-  }
-}
-
-class WidgetsSeparatorExample extends StatefulWidget {
-  const WidgetsSeparatorExample({super.key});
-
-  @override
-  State<WidgetsSeparatorExample> createState() =>
-      _WidgetsSeparatorExampleState();
-}
-
-class _WidgetsSeparatorExampleState extends State<WidgetsSeparatorExample> {
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+  Widget _groupedRadioButton() {
+    return const ExpansionTile(
+      title: Text("GroupedRadioButton"),
+      childrenPadding: EdgeInsets.all(10),
       children: [
-        _withDivider(),
-        _withGap(),
-      ].withGapInBetween(30),
-    );
-  }
-
-  Widget _withDivider() {
-    return SizedBox(
-      width: 200,
-      child: Card(
-        elevation: 5,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-          child: Column(
-            children: [
-              const Text("hello 1"),
-              const Text("hello 2"),
-              const Text("hello 3"),
-            ].withDividerInBetween(
-              color: Colors.grey[400],
-              endIndent: 5,
-              height: 5,
-              indent: 5,
-              thickness: 1,
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _withGap() {
-    return SizedBox(
-      width: 200,
-      child: Card(
-        elevation: 5,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
-          child: Column(
-            children: [
-              const Text("hello 1"),
-              const Text("hello 2"),
-              const Text("hello 3"),
-            ].withGapInBetween(30),
-          ),
-        ),
-      ),
+        GroupedRadioButtonExample(),
+      ],
     );
   }
 }

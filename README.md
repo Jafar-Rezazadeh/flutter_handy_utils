@@ -1,20 +1,25 @@
 # flutter_handy_utils
 
-The `flutter_handy_utils` package is a **community-driven** project designed to simplify common tasks in Flutter development. It offers a wide range of utility functions and extensions that make building Flutter apps more efficient. Below is everything you need to know about using, contributing, and staying involved with the package.
+The `flutter_handy_utils` package is a **community-driven** project designed to simplify common tasks in Flutter development. It offers a wide range of utility functions, extensions and widgets that make building Flutter apps easy. Below is everything you need to know about using, contributing, and staying involved with the package.
 
 ## Features
 
-### utils:
+### Utils:
 
-- tree builder: structured parent-child relationships
+- TreeBuilder: structured parent-child relationships.
 
-### extensions:
+### Extensions:
 
-- widgets separator: useful to separate widgets in a list by adding a gap or divider in between them
+- WidgetsSeparator: useful to separate widgets in a list by adding a gap or divider in between them.
+- StringEllipsSize: Returns a new string truncated from the start or end to the specified maximum length.
+
+### Widgets
+
+- GroupedRadioButton: A widget that displays a group of radio buttons.
 
 ## Usage
 
-### TreeBuilder:
+> ### TreeBuilder:
 
 creating structured parent-child relationship using the `TreeBuilder` util.
 
@@ -42,7 +47,9 @@ creating structured parent-child relationship using the `TreeBuilder` util.
 
 the result will be a `List<TreeOutPutItem<T>>` which contain the parent item and its children.
 
-### WidgetsSeparator:
+> ### WidgetsSeparator:
+
+separates the list of widgets by adding a gap or divider in between them.
 
 `withDividerInBetween`:
 
@@ -63,7 +70,44 @@ the result will be a `List<TreeOutPutItem<T>>` which contain the parent item and
    listOfWidgets.withGapInBetween(gapSize: 20);
 ```
 
+> ### StringEllipsSize:
+
+Returns a new string truncated from the start or end to the specified maximum length.
+
+```
+String text = "This is a very long string";
+
+String truncatedText = text.ellipsSize(maxLength: 10);
+print(truncatedText); // "This is a..."
+
+String truncatedTextFromStart = text.ellipsSize(maxLength: 10, fromStart: true);
+print(truncatedTextFromStart); // "...very long string".
+
+```
+
+> ### GroupedRadioButton:
+
+displays a group of radio buttons, where only one radio button can be selected at a time. The radio buttons are displayed in a column layout.
+
+```
+GroupedRadioButton<String>(
+  items: [
+    GroupedRadioButtonItem(title: Text("Option 1"), value: "option1"),
+    GroupedRadioButtonItem(title: Text("Option 2"), value: "option2"),
+  ],
+  onChanged: (value) {
+    print(value);
+  },
+  initialGroupValue: "option1",
+),
+
+```
+
 ---
+
+<br/>
+<br/>
+<br/>
 
 ## Additional information
 

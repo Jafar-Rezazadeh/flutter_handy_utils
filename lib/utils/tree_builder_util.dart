@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 /// A utility class for building  structured parent-child relationships.
 ///
 class TreeBuilder<T> {
@@ -88,18 +86,6 @@ class _TreeNode<T> {
   void addChild(_TreeNode<T> child) {
     children.add(child);
   }
-
-  @override
-  String toString() {
-    return """\n
-    {\n
-      itemID: ${root.id}
-      patentID: ${root.parentId}
-      children: $children
-    }\n
-
-""";
-  }
 }
 
 /// [parentId] = 0 means that this item is parent
@@ -125,30 +111,4 @@ class TreeOutPutItem<T> {
     required this.depth,
     required this.children,
   });
-
-  @override
-  String toString() {
-    return _treeOutputItemAsString(
-      TreeOutPutItem<T>(data: data, depth: depth, children: children),
-    );
-  }
-
-  dynamic _treeOutputItemAsString(TreeOutPutItem<dynamic> item) {
-    final jsonList = _jsonListGenerator(item);
-
-    final prettyJson = const JsonEncoder.withIndent('  ').convert(jsonList);
-
-    return prettyJson;
-  }
-
-  Map<String, dynamic> _jsonListGenerator(TreeOutPutItem<dynamic> item) {
-    final jsonList = {
-      "data": item.data,
-      "children":
-          item.children.map((child) => _jsonListGenerator(child)).toList(),
-      "depth": item.depth
-    };
-
-    return jsonList;
-  }
 }
