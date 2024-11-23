@@ -1,16 +1,17 @@
 # flutter_handy_utils
 
-The `flutter_handy_utils` package is a **community-driven** project designed to simplify common tasks in Flutter development. It offers a wide range of utility functions and extensions that make building Flutter apps more efficient. Below is everything you need to know about using, contributing, and staying involved with the package.
+The `flutter_handy_utils` package is a **community-driven** project designed to simplify common tasks in Flutter development. It offers a wide range of utility functions, extensions and widgets that make building Flutter apps easy. Below is everything you need to know about using, contributing, and staying involved with the package.
 
 ## Features
 
 ### utils:
 
-- tree builder: structured parent-child relationships
+- TreeBuilder: structured parent-child relationships
 
 ### extensions:
 
-- widgets separator: useful to separate widgets in a list by adding a gap or divider in between them
+- WidgetsSeparator: useful to separate widgets in a list by adding a gap or divider in between them
+- StringEllipsSize: Returns a new string truncated to the specified maximum length
 
 ## Usage
 
@@ -44,6 +45,8 @@ the result will be a `List<TreeOutPutItem<T>>` which contain the parent item and
 
 ### WidgetsSeparator:
 
+separates the list of widgets by adding a gap or divider in between them.
+
 `withDividerInBetween`:
 
 ```dart
@@ -61,6 +64,21 @@ the result will be a `List<TreeOutPutItem<T>>` which contain the parent item and
 
 ```dart
    listOfWidgets.withGapInBetween(gapSize: 20);
+```
+
+### StringEllipsSize:
+
+Returns a new string truncated from the start or end to the specified maximum length.
+
+```
+String text = "This is a very long string";
+
+String truncatedText = text.ellipsSize(maxLength: 10);
+print(truncatedText); // "This is a..."
+
+String truncatedTextFromStart = text.ellipsSize(maxLength: 10, fromStart: true);
+print(truncatedTextFromStart); // "...very long string".
+
 ```
 
 ---
