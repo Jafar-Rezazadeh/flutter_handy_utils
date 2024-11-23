@@ -1,3 +1,4 @@
+import 'package:example/examples/grouped_radio_button_example.dart';
 import 'package:flutter/material.dart';
 
 import 'examples/string_ellips_size_example.dart';
@@ -29,6 +30,7 @@ class MainApp extends StatelessWidget {
             _treeBuilder(),
             _widgetsSeparator(),
             _stringEllipsSize(),
+            _groupedRadioButton(),
           ],
         ),
       ),
@@ -61,6 +63,16 @@ class MainApp extends StatelessWidget {
       childrenPadding: EdgeInsets.all(10),
       children: [
         StringEllipsSizeExample(),
+      ],
+    );
+  }
+
+  Widget _groupedRadioButton() {
+    return const ExpansionTile(
+      title: Text("GroupedRadioButton"),
+      childrenPadding: EdgeInsets.all(10),
+      children: [
+        GroupedRadioButtonExample(),
       ],
     );
   }

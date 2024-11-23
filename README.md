@@ -6,12 +6,12 @@ The `flutter_handy_utils` package is a **community-driven** project designed to 
 
 ### utils:
 
-- TreeBuilder: structured parent-child relationships
+- TreeBuilder: structured parent-child relationships.
 
 ### extensions:
 
-- WidgetsSeparator: useful to separate widgets in a list by adding a gap or divider in between them
-- StringEllipsSize: Returns a new string truncated to the specified maximum length
+- WidgetsSeparator: useful to separate widgets in a list by adding a gap or divider in between them.
+- StringEllipsSize: Returns a new string truncated from the start or end to the specified maximum length.
 
 ## Usage
 
