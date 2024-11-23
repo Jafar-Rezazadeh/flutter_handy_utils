@@ -4,18 +4,22 @@ The `flutter_handy_utils` package is a **community-driven** project designed to 
 
 ## Features
 
-### utils:
+### Utils:
 
 - TreeBuilder: structured parent-child relationships.
 
-### extensions:
+### Extensions:
 
 - WidgetsSeparator: useful to separate widgets in a list by adding a gap or divider in between them.
 - StringEllipsSize: Returns a new string truncated from the start or end to the specified maximum length.
 
+### Widgets
+
+- GroupedRadioButton: A widget that displays a group of radio buttons.
+
 ## Usage
 
-### TreeBuilder:
+> ### TreeBuilder:
 
 creating structured parent-child relationship using the `TreeBuilder` util.
 
@@ -43,7 +47,7 @@ creating structured parent-child relationship using the `TreeBuilder` util.
 
 the result will be a `List<TreeOutPutItem<T>>` which contain the parent item and its children.
 
-### WidgetsSeparator:
+> ### WidgetsSeparator:
 
 separates the list of widgets by adding a gap or divider in between them.
 
@@ -66,7 +70,7 @@ separates the list of widgets by adding a gap or divider in between them.
    listOfWidgets.withGapInBetween(gapSize: 20);
 ```
 
-### StringEllipsSize:
+> ### StringEllipsSize:
 
 Returns a new string truncated from the start or end to the specified maximum length.
 
@@ -81,7 +85,29 @@ print(truncatedTextFromStart); // "...very long string".
 
 ```
 
+> ### GroupedRadioButton:
+
+displays a group of radio buttons, where only one radio button can be selected at a time. The radio buttons are displayed in a column layout.
+
+```
+GroupedRadioButton<String>(
+  items: [
+    GroupedRadioButtonItem(title: Text("Option 1"), value: "option1"),
+    GroupedRadioButtonItem(title: Text("Option 2"), value: "option2"),
+  ],
+  onChanged: (value) {
+    print(value);
+  },
+  initialGroupValue: "option1",
+),
+
+```
+
 ---
+
+<br/>
+<br/>
+<br/>
 
 ## Additional information
 
