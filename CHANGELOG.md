@@ -1,3 +1,9 @@
+## v2.2.3
+
+> ### Improved:
+>
+> - Updated `README.md`: Extensions section now lists all `WidgetsSeparator` methods and includes a showcase image placeholder for better documentation and discoverability.
+
 ## v2.2.2
 
 > ### Added:
