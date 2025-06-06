@@ -1,21 +1,25 @@
-> 1. Make feature using TDD principle
+> 1. Develop the feature or fix using TDD principles (write tests first, then code).
 >
-> 2. Add documentation to the feature
+> 2. Add or update documentation for the new feature or fix.
 >
-> 3. Make and example in `example` app
+> 3. Create or update an example in the `example` app to demonstrate the feature or fix.
 >
-> 4. Add feature export to `flutter_handy_utils.dart`
+> 4. Export the feature or fix in `flutter_handy_utils.dart` if needed.
 >
-> 5. Make new Release
+> 5. Update the `README.md` file with usage, documentation, or example changes.
 >
-> 6. Update `README.md` file
+> 6. Update the `CHANGELOG.md` file with a summary of the new feature or fix.
 >
-> 7. Update `CHANGELOG.md` file
+> 7. Bump the version in `pubspec.yaml` according to the change (patch, minor, or major).
 >
-> 8. Run `dart pub publish --dry-run` make sure no warnings
+> 8. Run all tests to ensure everything passes: `flutter test`.
 >
-> 9. upgrade version in `pubspec.yaml`
+> 9. Run `dart pub publish --dry-run` to check for warnings or errors.
 >
-> 10. finish release and go to master branch
+> 10. Commit all changes with a clear commit message.
 >
-> 11. Run `dart pub publish`
+> 11. Push changes to the main/master branch.
+>
+> 12. Tag the release in git (optional but recommended).
+>
+> 13. Run `dart pub publish` to publish the package to pub.dev.
