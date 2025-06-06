@@ -12,12 +12,16 @@ class WidgetsSeparatorExample extends StatefulWidget {
 class _WidgetsSeparatorExampleState extends State<WidgetsSeparatorExample> {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        _withDivider(),
-        _withGap(),
-      ].withGapInBetween(30),
+    return SizedBox(
+      height: 300,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          _withDivider(),
+          _withGap(),
+          _withWidget(),
+        ].withGapInBetween(30),
+      ),
     );
   }
 
@@ -30,18 +34,36 @@ class _WidgetsSeparatorExampleState extends State<WidgetsSeparatorExample> {
           padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
           child: Column(
             children: [
-              const Text("hello 1"),
-              const Text("hello 2"),
-              const Text("hello 3"),
-            ].withDividerInBetween(
-              color: Colors.grey[400],
-              endIndent: 5,
-              height: 5,
-              indent: 5,
-              thickness: 1,
-            ),
+              _titleWidget("withDividerInBetween"),
+              Column(
+                children: [
+                  const Text("hello 1"),
+                  const Text("hello 2"),
+                  const Text("hello 3"),
+                ].withDividerInBetween(
+                  color: Colors.grey[400],
+                  endIndent: 5,
+                  height: 5,
+                  indent: 5,
+                  thickness: 1,
+                ),
+              ),
+            ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _titleWidget(String title) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 20),
+      child: Text(
+        title,
+        style: Theme.of(context)
+            .textTheme
+            .bodyMedium
+            ?.copyWith(fontWeight: FontWeight.bold),
       ),
     );
   }
@@ -55,10 +77,44 @@ class _WidgetsSeparatorExampleState extends State<WidgetsSeparatorExample> {
           padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
           child: Column(
             children: [
-              const Text("hello 1"),
-              const Text("hello 2"),
-              const Text("hello 3"),
-            ].withGapInBetween(30),
+              _titleWidget("withGapInBetween"),
+              Column(
+                children: [
+                  const Text("hello 1"),
+                  const Text("hello 2"),
+                  const Text("hello 3"),
+                ].withGapInBetween(30),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _withWidget() {
+    return SizedBox(
+      width: 200,
+      child: Card(
+        elevation: 5,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+          child: Column(
+            children: [
+              _titleWidget("withWidgetInBetween"),
+              Column(
+                children: [
+                  const Text("hello 1"),
+                  const Text("hello 2"),
+                  const Text("hello 3"),
+                ].withWidgetInBetween(
+                  const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 10),
+                    child: Icon(Icons.arrow_downward),
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),

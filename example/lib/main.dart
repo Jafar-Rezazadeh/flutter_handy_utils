@@ -25,7 +25,7 @@ class MainApp extends StatelessWidget {
           backgroundColor: Colors.white,
           centerTitle: true,
         ),
-        body: Column(
+        body: ListView(
           children: [
             _treeBuilder(),
             _widgetsSeparator(),

@@ -1,3 +1,11 @@
+## v2.2.2
+
+> ### Added:
+>
+> - **New extension method:** `WidgetsSeparator.withWidgetInBetween` on `List<Widget>`. Easily insert any custom widget between all items in a widget list.
+>
+> - **Improved:** `WidgetsSeparator` functionality has been improved and refactored for better usability.
+
 ## v2.2.1
 
 > ### Fixed:

@@ -109,4 +109,48 @@ void main() {
       ]);
     });
   });
+
+  group("withWidgetInBetween -", () {
+    test("should add the given widget in the list", () {
+      //arrange
+      final List<Widget> list = [
+        const Text("hello1"),
+        const Text("hello2"),
+        const Text("hello3"),
+      ];
+
+      //act
+      final separatedList = list.withWidgetInBetween(const Icon(Icons.home));
+
+      //assert
+      expect(separatedList, contains(isA<Icon>()));
+    });
+
+    test("should add the item of list and the separator in expected order", () {
+      //arrange
+      final List<Widget> list = [
+        const Text("hello1"),
+        const Text("hello2"),
+      ];
+
+      //act
+      final separatedList = list.withWidgetInBetween(const Icon(Icons.home));
+
+      //assert
+      expect(separatedList.first, isA<Text>());
+      expect(separatedList[1], isA<Icon>());
+      expect(separatedList.last, isA<Text>());
+    });
+
+    test("should do return empty list when given list is empty ", () {
+      //arrange
+      final list = <Widget>[];
+
+      //act
+      final result = list.withWidgetInBetween(const Icon(Icons.home));
+
+      //assert
+      expect(result, isEmpty);
+    });
+  });
 }

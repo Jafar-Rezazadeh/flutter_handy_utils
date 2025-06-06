@@ -10,8 +10,16 @@ The `flutter_handy_utils` package is a **community-driven** project designed to 
 
 ### Extensions:
 
-- WidgetsSeparator: useful to separate widgets in a list by adding a gap or divider in between them.
-- StringEllipsSize: Returns a new string truncated from the start or end to the specified maximum length.
+- **WidgetsSeparator**: Easily separate widgets in a List by adding a gap, divider, or any custom widget in between them.
+  - `withGapInBetween(double gapSize)`: Adds a gap of the specified size between each widget.
+  - `withDividerInBetween(...)`: Adds a customizable divider between each widget.
+  - `withWidgetInBetween(Widget widget)`: Adds any custom widget between each item in the list.
+- **StringEllipsSize**: Returns a new string truncated from the start or end to the specified maximum length.
+
+<!-- Showcase image placeholder -->
+<p align="center">
+  <img src="https://via.placeholder.com/600x200?text=WidgetsSeparator+Showcase" alt="WidgetsSeparator Showcase"/>
+</p>
 
 ### Widgets
 

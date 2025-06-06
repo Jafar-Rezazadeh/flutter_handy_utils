@@ -15,21 +15,13 @@ extension WidgetsSeparator on List<Widget> {
   List<Widget> withGapInBetween(double gapSize) {
     List<Widget> separatedList = <Widget>[];
 
-    length > 0 ? separatedList.add(first) : null;
-
-    map(
-      (e) {
-        if (_isNotFirstAndLastItem(e)) {
-          separatedList.addAll([Gap(gapSize), e]);
-        }
-      },
-    ).toList();
+    for (var i = 0; i < length; i++) {
+      separatedList.add(this[i]);
+      ifNotLast(i) ? separatedList.add(Gap(gapSize)) : null;
+    }
 
     return separatedList;
   }
-
-  bool _isNotFirstAndLastItem(Widget e) =>
-      indexOf(e) > 0 && indexOf(e) < length;
 
   /// [withDividerInBetween] Returns a new list with dividers between each widget.
   ///
@@ -56,9 +48,6 @@ extension WidgetsSeparator on List<Widget> {
     double? endIndent,
   }) {
     List<Widget> separatedList = <Widget>[];
-
-    length > 0 ? separatedList.add(first) : null;
-
     final divider = Divider(
       color: color,
       height: height,
@@ -67,14 +56,34 @@ extension WidgetsSeparator on List<Widget> {
       endIndent: endIndent,
     );
 
-    map(
-      (e) {
-        if (_isNotFirstAndLastItem(e)) {
-          separatedList.addAll([divider, e]);
-        }
-      },
-    ).toList();
+    for (var i = 0; i < length; i++) {
+      separatedList.add(this[i]);
+      ifNotLast(i) ? separatedList.add(divider) : null;
+    }
 
     return separatedList;
   }
+
+  /// [withWidgetInBetween] Returns a new list with the given widget inserted between each element of the original list.
+  ///
+  /// The [widget] parameter specifies the widget to insert between each item.
+  ///
+  /// If the list is empty, an empty list is returned.
+  ///
+  /// Example:
+  /// ```dart
+  /// List<Widget> widgets = [Widget1(), Widget2(), Widget3()];
+  /// List<Widget> separatedWidgets = widgets.withWidgetInBetween(SizedBox(width: 8));
+  /// ```
+  List<Widget> withWidgetInBetween(Widget widget) {
+    final separatedList = <Widget>[];
+
+    for (int i = 0; i < length; i++) {
+      separatedList.add(this[i]);
+      ifNotLast(i) ? separatedList.add(widget) : null;
+    }
+    return separatedList;
+  }
+
+  bool ifNotLast(int i) => i != length - 1;
 }
