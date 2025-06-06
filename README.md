@@ -11,15 +11,12 @@ The `flutter_handy_utils` package is a **community-driven** project designed to 
 ### Extensions:
 
 - **WidgetsSeparator**: Easily separate widgets in a List by adding a gap, divider, or any custom widget in between them.
+
   - `withGapInBetween(double gapSize)`: Adds a gap of the specified size between each widget.
   - `withDividerInBetween(...)`: Adds a customizable divider between each widget.
   - `withWidgetInBetween(Widget widget)`: Adds any custom widget between each item in the list.
-- **StringEllipsSize**: Returns a new string truncated from the start or end to the specified maximum length.
 
-<!-- Showcase image placeholder -->
-<p align="center">
-  <img src="https://via.placeholder.com/600x200?text=WidgetsSeparator+Showcase" alt="WidgetsSeparator Showcase"/>
-</p>
+- **StringEllipsSize**: Returns a new string truncated from the start or end to the specified maximum length.
 
 ### Widgets
 
@@ -59,6 +56,12 @@ the result will be a `List<TreeOutPutItem<T>>` which contain the parent item and
 
 separates the list of widgets by adding a gap or divider in between them.
 
+ <!-- Showcase image placeholder -->
+
+<p align="start" >
+   <img src="widgetSeparator.PNG" alt="WidgetsSeparator Showcase" width="400"/>
+</p>
+
 `withDividerInBetween`:
 
 ```dart
@@ -76,6 +79,17 @@ separates the list of widgets by adding a gap or divider in between them.
 
 ```dart
    listOfWidgets.withGapInBetween(gapSize: 20);
+```
+
+`withWidgetInBetween`:
+
+```dart
+   listOfWidgets.withWidgetInBetween(
+                  const Padding(
+                    padding: EdgeInsets.symmetric(vertical: 10),
+                    child: Icon(Icons.arrow_downward),
+                  ),
+                );
 ```
 
 > ### StringEllipsSize:
