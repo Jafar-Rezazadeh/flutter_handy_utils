@@ -43,8 +43,12 @@ class TreeBuilder<T> {
 
   List<_TreeNode<T>> _getOnlyRootsWithItsChildren(
       Map<int, _TreeNode<T>> categoryNodeMap) {
+    // Collect all ids
+    final allIds = categoryNodeMap.values.map((node) => node.root.id).toSet();
+    // A root is any node whose parentId is 0 or whose parentId is not in the list
     return categoryNodeMap.values
-        .where((node) => node.root.parentId == 0)
+        .where((node) =>
+            node.root.parentId == 0 || !allIds.contains(node.root.parentId))
         .toList();
   }
 

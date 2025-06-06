@@ -1,3 +1,9 @@
+## v2.2.1
+
+> ### Fixed:
+>
+> - Improved `TreeBuilder` utility: Items whose `parentId` does not exist in the list are now treated as root nodes. This ensures all items are included in the tree, even if their parent is missing from the input list.
+
 ## v2.2.0
 
 > ### Added:

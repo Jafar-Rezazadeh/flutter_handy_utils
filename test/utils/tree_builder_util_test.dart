@@ -22,9 +22,9 @@ void main() {
     test("should nest the items correctly by parent id", () {
       //arrange
       final items = [
-        TreeInputItem(id: 1, parentId: 0, data: "parent"),
+        TreeInputItem(id: 1, parentId: 8565, data: "parent"),
         TreeInputItem(id: 2, parentId: 1, data: "child"),
-        TreeInputItem(id: 2, parentId: 1, data: "child"),
+        TreeInputItem(id: 3, parentId: 1, data: "child"),
       ];
 
       //act
